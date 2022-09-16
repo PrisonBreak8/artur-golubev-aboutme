@@ -288,6 +288,94 @@ body {
 }
 
 @media (min-width: 70em) {
+  .footer__body {
+    padding-top: 4.375rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 70em) {
+  .footer__body {
+    padding-top: clamp( 2.5rem , 1.75rem  +  3.75vw , 4.375rem );
+  }
+}
+@media (max-width: 20em) {
+  .footer__body {
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 70em) {
+  .footer__body {
+    padding-bottom: 4.375rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 70em) {
+  .footer__body {
+    padding-bottom: clamp( 2.5rem , 1.75rem  +  3.75vw , 4.375rem );
+  }
+}
+@media (max-width: 20em) {
+  .footer__body {
+    padding-bottom: 2.5rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .footer__body {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 29.99875em) {
+  .footer__body {
+    display: flex;
+    align-items: center;
+  }
+}
+.footer__authors {
+  flex: 1 1 auto;
+}
+.footer__name {
+  font-family: "DM Sans";
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #2429af;
+}
+
+.my-social-networks {
+  margin-left: 0.9375rem;
+}
+@media (max-width: 29.99875em) {
+  .my-social-networks {
+    margin: 0 0 0.9375rem 0;
+  }
+}
+.my-social-networks__item {
+  display: flex;
+}
+@media (min-width: 70em) {
+  .my-social-networks__item {
+    	column-gap: 1.875rem;
+  }
+}
+@media (min-width: 29.99875em) and (max-width: 70em) {
+  .my-social-networks__item {
+    	column-gap: clamp( 1.125rem , 0.5625410143rem  +  1.8749414081vw , 1.875rem );
+  }
+}
+@media (max-width: 29.99875em) {
+  .my-social-networks__item {
+    	column-gap: 1.125rem;
+  }
+}
+.my-social-networks__list {
+  transition: color 0.3s ease-in-out;
+}
+.my-social-networks__list img {
+  height: 100%;
+  width: 40px;
+}
+@media (min-width: 70em) {
   .page__about {
     padding-top: 20rem;
   }
@@ -482,6 +570,7 @@ body {
 .list-projects__description {
   display: flex;
   flex-direction: column;
+  flex-direction: column;
 }
 .list-projects__description-text {
   flex: 1 1 auto;
@@ -533,6 +622,7 @@ body {
   padding-bottom: 32.7%;
   padding-right: 11%;
   overflow: hidden;
+  cursor: pointer;
 }
 .list-projects__my-works img {
   position: absolute;
