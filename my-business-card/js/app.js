@@ -47,7 +47,14 @@
         document.dispatchEvent(e);
       });
     }
-  }, 0),
+  }, 0);
+  const c = document.querySelector(".button-more"),
+    d = document.querySelectorAll(".card-link--hidden");
+  c.addEventListener("click", function () {
+    d.forEach(function (e) {
+      e.classList.remove("card-link--hidden");
+    });
+  }),
     (window.PrisonBreak = !0),
     (function (e) {
       let t = new Image();
