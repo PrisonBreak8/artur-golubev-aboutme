@@ -78,11 +78,6 @@
 
 //====================================================================================================
 
-.page {
-	// .page__project
-	&__project {
-	}
-}
 .project-item {
 	// .project-item__container
 	&__container {
@@ -92,12 +87,16 @@
 		@include adaptiveValue("padding-top", 115, 40, 1120, 320, 1);
 		@include adaptiveValue("padding-bottom", 105, 40, 1120, 320, 1);
 		border-bottom: 2px solid $darkColor;
+		&.js-hidden {
+			display: none;
+		}
 		@media (min-width: em(599.98)) {
 			display: flex;
 			column-gap: rem(50);
 		}
 	}
 }
+
 .list-projects {
 	// .list-projects__description
 	&__description {
@@ -162,10 +161,6 @@
 			object-fit: cover;
 		}
 	}
-}
-
-.card-link--hidden {
-	display: none;
 }
 
 //========================================================================================================================================================

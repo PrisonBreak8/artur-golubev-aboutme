@@ -389,7 +389,24 @@ export function tabs() {
 }
 // Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
+
+	let btnshowMoreCards = document.querySelector('.button');
+	const hiddenCards = document.querySelectorAll('.js-hidden');
+	let isHidden = true;
 	let iconMenu = document.querySelector(".icon-menu");
+
+
+	if (btnshowMoreCards) {
+		btnshowMoreCards.addEventListener("click", () => {
+			btnshowMoreCards.textContent = isHidden
+				? 'Hide'
+				: 'Show more';
+
+			isHidden = !isHidden;
+			hiddenCards.forEach(item => item.classList.toggle('js-hidden'));
+		});
+	};
+
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
 			if (bodyLockStatus) {
@@ -621,4 +638,6 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
+
+
 //================================================================================================================================================================================================================================================================================================================
