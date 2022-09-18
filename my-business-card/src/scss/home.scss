@@ -91,7 +91,7 @@
 	&__list {
 		@include adaptiveValue("padding-top", 115, 40, 1120, 320, 1);
 		@include adaptiveValue("padding-bottom", 105, 40, 1120, 320, 1);
-		border-bottom: 1.5px solid $darkColor;
+		border-bottom: 2px solid $darkColor;
 		@media (min-width: em(599.98)) {
 			display: flex;
 			column-gap: rem(50);
@@ -152,11 +152,7 @@
 		padding-bottom: 32.7%;
 		padding-right: 11%;
 		overflow: hidden;
-		cursor: pointer;
 
-		// .list-projects__ibg
-		&__ibg {
-		}
 		img {
 			position: absolute;
 			top: 0;
@@ -166,6 +162,10 @@
 			object-fit: cover;
 		}
 	}
+}
+
+.card-link--hidden {
+	display: none;
 }
 
 //========================================================================================================================================================
