@@ -47,14 +47,7 @@
         document.dispatchEvent(e);
       });
     }
-  }, 0);
-  const c = document.querySelector(".button-more"),
-    d = document.querySelectorAll(".card-link--hidden");
-  c.addEventListener("click", function () {
-    d.forEach(function (e) {
-      e.classList.remove("card-link--hidden");
-    });
-  }),
+  }, 0),
     (window.PrisonBreak = !0),
     (function (e) {
       let t = new Image();
@@ -69,14 +62,25 @@
       document.documentElement.classList.add(t);
     }),
     (function () {
-      let o = document.querySelector(".icon-menu");
+      let o = document.querySelector(".button");
+      const l = document.querySelectorAll(".js-hidden");
+      let c = !0,
+        d = document.querySelector(".icon-menu");
       o &&
-        o.addEventListener("click", function (o) {
-          e &&
-            (((e = 500) => {
-              document.documentElement.classList.contains("lock") ? t(e) : n(e);
-            })(),
-            document.documentElement.classList.toggle("menu-open"));
-        });
+        o.addEventListener("click", () => {
+          (o.textContent = c ? "Hide" : "Show more"),
+            (c = !c),
+            l.forEach((e) => e.classList.toggle("js-hidden"));
+        }),
+        d &&
+          d.addEventListener("click", function (o) {
+            e &&
+              (((e = 500) => {
+                document.documentElement.classList.contains("lock")
+                  ? t(e)
+                  : n(e);
+              })(),
+              document.documentElement.classList.toggle("menu-open"));
+          });
     })();
 })();

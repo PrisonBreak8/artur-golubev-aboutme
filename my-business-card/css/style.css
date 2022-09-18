@@ -598,6 +598,9 @@ body {
     padding-bottom: 2.5rem;
   }
 }
+.project-item__list.js-hidden {
+  display: none;
+}
 @media (min-width: 37.49875em) {
   .project-item__list {
     display: flex;
@@ -668,10 +671,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.card-link--hidden {
-  display: none;
 }
 
 .about-me__body {
