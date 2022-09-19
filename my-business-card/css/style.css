@@ -420,12 +420,12 @@ body {
 }
 @media (min-width: 20em) and (max-width: 70em) {
   .page__about {
-    padding-top: clamp( 7.5rem , 2.5rem  +  25vw , 20rem );
+    padding-top: clamp( 6.25rem , 0.75rem  +  27.5vw , 20rem );
   }
 }
 @media (max-width: 20em) {
   .page__about {
-    padding-top: 7.5rem;
+    padding-top: 6.25rem;
   }
 }
 
@@ -543,9 +543,6 @@ body {
     font-size: 1.625rem;
   }
 }
-.about-page__icon {
-  cursor: pointer;
-}
 .about-page__icon img {
   display: inline-block;
 }
@@ -604,14 +601,15 @@ body {
 @media (min-width: 37.49875em) {
   .project-item__list {
     display: flex;
-    column-gap: 3.125rem;
+    column-gap: 2.5rem;
   }
 }
 
 .list-projects__description {
   display: flex;
   flex-direction: column;
-  flex-direction: column;
+  max-width: 26.6875rem;
+  width: 100%;
 }
 .list-projects__description-text {
   flex: 1 1 auto;
@@ -645,20 +643,40 @@ body {
   color: #606060;
   margin-bottom: 1.0714285714em;
 }
-.list-projects__more-shots {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.21;
-  letter-spacing: -0.03em;
+.list-projects__from-project {
+  display: inline-flex;
 }
 @media (max-width: 37.49875em) {
-  .list-projects__more-shots {
+  .list-projects__from-project {
     margin-bottom: 1.2222222222em;
     display: block;
   }
 }
+.list-projects__more-shots {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.21;
+  border-bottom: 2.5px solid rgba(96, 96, 96, 0.4);
+  padding: 0.125rem 0;
+  letter-spacing: -0.03em;
+}
+.list-projects__more-shots::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: rgba(24, 23, 23, 0.5);
+  transition: width 0.3s ease-in-out;
+}
+.list-projects__more-shots:hover::before {
+  width: 100%;
+}
 .list-projects__my-works {
   position: relative;
+  display: block;
   width: 100%;
   padding-bottom: 32.7%;
   padding-right: 11%;
@@ -670,7 +688,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0.9;
   object-fit: cover;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .list-projects__my-works img:hover {
+    opacity: 1;
+    transform: scale(1.02);
+  }
 }
 
 .about-me__body {
@@ -691,12 +717,12 @@ body {
 }
 @media (min-width: 20em) and (max-width: 70em) {
   .about-me__body {
-    padding-top: clamp( 8.75rem , 8rem  +  3.75vw , 10.625rem );
+    padding-top: clamp( 6.25rem , 4.5rem  +  8.75vw , 10.625rem );
   }
 }
 @media (max-width: 20em) {
   .about-me__body {
-    padding-top: 8.75rem;
+    padding-top: 6.25rem;
   }
 }
 .about-me__description {

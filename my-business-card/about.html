@@ -6,49 +6,51 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220918214634">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220919204450">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body data-barba="wrapper">
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
 
 				<div class="header__name">
-					<a href="#" class="header__logo">Artur <span>Golubev.</span> </a>
+					<a href="home.html" class="header__logo">Artur <span>Golubev.</span> </a>
 				</div>
 
 				<div class="header__menu menu">
 
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Work</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">About</a></li>
-							<li class="menu__item"><a href="#" class="menu__link" target="_blank">My resume</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Work</a></li>
+							<li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+							<li class="menu__item"><a href="img/my-works/artur-cv.pdf" class="menu__link" download="">My resume</a></li>
+							<li class="menu__item"><a data-goto-header="60" data-goto=".js-contact-footer" href="#js-contact-footer" class="menu__link">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 			</div>
 		</header>
-		<main class="page">
+		<main class="page" data-barba="container" data-barba-namespace="home">
+
+
 			<section class="about-me">
 				<div class="about-me__container">
 					<div class="about-me__body">
 
 						<div class="about-me__description">
 							<h1 class="about-me__name">
-								Hi I’m Mehmet Akif Karasu, 3D artist & sculptor.
+								Hi! I’m, Artur Golubev, I create websites.
 							</h1>
 							<p class="about-me__text">
-								My work is mainly focused on third-dimension modeling, texturing and rendering. I like exploring the creatures with a touch of dark surrealism for characters and production.
+								My work is mainly focused on HTML-coding, CSS, JS. I like to explore the possibilities of adaptive layout and bring pages to life.
 							</p>
 							<p class="about-me__sub-text">
-								Now I’m an interactive media design student in Istanbul ⏤ currently freelancing and seeking internship opportunities.
+								Now I’m a student at RS School, self-taught, freelancer and looking for internship and job opportunities.
 							</p>
 						</div>
 
@@ -66,22 +68,22 @@
 					<div class="info__body">
 
 						<div class="info__soft">
-							<h4 class="info__title">Main Software</h4>
+							<h4 class="info__title">Main Skills</h4>
 							<div class="info__text">
 								<p>
-									Pixologic ZBrush, Autodesk Maya, The Foundry Mari, Arnold Renderer, Blender, Forger
+									HTML, CSS, SASS/SCSS, JavaScript, Git version control, Text editors, BEM, Pixel perfect, Adaptive layout.
 								</p>
 								<p>
-									Adobe CC, Figma, Ableton
+									Problem-solving skills and critical thinking, communication skills, interpersonal skills, self-learning, adaptability, patience.
 								</p>
 							</div>
 						</div>
 
 						<div class="info__skills">
-							<h4 class="info__title">Main Skills</h4>
+							<h4 class="info__title">Main Software</h4>
 							<div class="info__text">
 								<p>
-									Organic and Polygonal Modeling, UV Layout, Texturing, Retopology, Ilustration, Sound Design
+									Adobe Illustrator, Figma, Visual Studio Code, Sublime Text, GitHub
 								</p>
 							</div>
 						</div>
@@ -110,7 +112,7 @@
 			</section>
 
 		</main>
-		<footer class="footer">
+		<footer class="footer js-contact-footer">
 			<div class="footer__container">
 
 				<div class="footer__body">
@@ -162,7 +164,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220918214634"></script>
+	<script src="js/app.min.js?_v=20220919204450"></script>
 </body>
 
 </html>
