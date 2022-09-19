@@ -12,7 +12,7 @@
 		@media (max-width: $mobile) {
 			flex-wrap: wrap;
 		}
-		@include adaptiveValue("padding-top", 170, 140, 1120, 320, 1);
+		@include adaptiveValue("padding-top", 170, 100, 1120, 320, 1);
 		//@include adaptiveValue("padding-bottom", 105, 40, 1120, 320, 1);
 	}
 	// .about-me__description

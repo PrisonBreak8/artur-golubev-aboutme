@@ -65,7 +65,7 @@ flsFunctions.menuInit();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// flsFunctions.initPopups();
+//flsFunctions.initPopups();
 
 /*
 Модуль параллакса мышью
@@ -75,7 +75,7 @@ flsFunctions.menuInit();
 // flsFunctions.initParallaxMouse();
 
 // Работа с формами ========================================================================================================================================================================================================================================================
-import * as flsForms from "./files/forms/forms.js";
+//import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
 // flsForms.formFieldsInit();
@@ -123,7 +123,9 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+//import "./files/sliders.js";
+
+
 
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
 
@@ -133,7 +135,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
 Сниппет(HTML): 
 */
-// import './files/scroll/simplebar.js';
+//import './files/scroll/simplebar.js';
 
 /*
 Ленивая (отложенная) загрузка картинок
@@ -152,7 +154,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // flsScroll.scrollWatcher();
 
 // Плавная навигация по странице
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // flsScroll.headerScroll();
@@ -167,6 +169,11 @@ import * as flsScroll from "./files/scroll/scroll.js";
 Сниппет(HTML):
 */
 // import "./files/gallery.js";
+
+
+
+
+import "./files/barba.min.js";
 
 // Прочее ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */

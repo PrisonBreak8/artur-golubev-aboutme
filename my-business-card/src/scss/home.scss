@@ -3,7 +3,7 @@
 .page {
 	// .page__about
 	&__about {
-		@include adaptiveValue("padding-top", 320, 120, 1120, 320, 1);
+		@include adaptiveValue("padding-top", 320, 100, 1120, 320, 1);
 	}
 }
 .about-page {
@@ -68,7 +68,6 @@
 	}
 	// .about-page__icon
 	&__icon {
-		cursor: pointer;
 		img {
 			display: inline-block;
 			@include adaptiveValue("height", 38, 26, 1120, 320, 1);
@@ -92,7 +91,7 @@
 		}
 		@media (min-width: em(599.98)) {
 			display: flex;
-			column-gap: rem(50);
+			column-gap: rem(40);
 		}
 	}
 }
@@ -102,7 +101,8 @@
 	&__description {
 		display: flex;
 		flex-direction: column;
-		flex-direction: column;
+		max-width: rem(427);
+		width: 100%;
 	}
 	// .list-projects__description-text
 	&__description-text {
@@ -132,33 +132,58 @@
 	}
 	// .list-projects__from-project
 	&__from-project {
-	}
-	// .list-projects__more-shots
-	&__more-shots {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 1.21;
-		letter-spacing: -0.03em;
+		display: inline-flex;
 		@media (max-width: em(599.98)) {
 			margin-bottom: em(22, 18);
 			display: block;
 		}
 	}
+	// .list-projects__more-shots
+	&__more-shots {
+		position: relative;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.21;
+		border-bottom: 2.5px solid rgba(96, 96, 96, 0.4);
+		padding: rem(2) 0;
+		letter-spacing: -0.03em;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 2.5px;
+			bottom: -2.5px;
+			left: 0;
+			background-color: rgba(24, 23, 23, 0.5);
+			transition: width 0.3s ease-in-out;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
 	// .list-projects__my-works
 	&__my-works {
 		position: relative;
+		display: block;
 		width: 100%;
 		padding-bottom: 32.7%;
 		padding-right: 11%;
 		overflow: hidden;
-
 		img {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+			opacity: 0.9;
 			object-fit: cover;
+			transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 1;
+					transform: scale(1.02);
+				}
+			}
 		}
 	}
 }

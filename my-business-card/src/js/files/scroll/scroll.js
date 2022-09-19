@@ -1,7 +1,7 @@
 // Подключение функционала "Чертогов Фрилансера"
 import { isMobile, getHash } from "../functions.js";
 // Импорт класса наблюдателя.
-import { ScrollWatcher } from "../../libs/watcher.js";
+//import { ScrollWatcher } from "../../libs/watcher.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "./gotoblock.js";
 // Переменная контроля добавления события window scroll.
