@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['PrisonBreak'] = true;
+window['PrisonBreak'] = false;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
