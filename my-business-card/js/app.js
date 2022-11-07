@@ -1943,7 +1943,7 @@
     barba.init({
       transitions: [{ name: "base", async leave(e) {}, async enter() {} }],
     }),
-    (window.PrisonBreak = !0),
+    (window.PrisonBreak = !1),
     (function (e) {
       let t = new Image();
       (t.onload = t.onerror =
