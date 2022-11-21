@@ -1,0 +1,200 @@
+//========================================================================================================================================================
+.about-me {
+	// .about-me__container
+	&__container {
+	}
+	// .about-me__body
+	&__body {
+		display: flex;
+		justify-content: flex-start;
+		column-gap: rem(30);
+		row-gap: rem(40);
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+		@include adaptiveValue("padding-top", 170, 100, 1120, 320, 1);
+		//@include adaptiveValue("padding-bottom", 105, 40, 1120, 320, 1);
+	}
+	// .about-me__description
+	&__description {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
+	// .about-me__name
+	&__name {
+		font-family: "DM Sans";
+		font-weight: 500;
+
+		@media (min-width: $tablet) {
+			max-width: rem(480);
+		}
+
+		@include adaptiveValue("font-size", 60, 40, 1120, 727, 1);
+		line-height: math.div(58, 60);
+		letter-spacing: -0.03em;
+		&:not(:last-child) {
+			margin-bottom: em(30, 60);
+		}
+	}
+
+	// .about-me__text
+	&__text,
+	// .about-me__sub-text
+	&__sub-text {
+		font-family: "DM Sans";
+		@include adaptiveValue("font-size", 32, 26, 1120, 727, 1);
+		line-height: math.div(37, 32);
+		letter-spacing: -0.03em;
+		color: $greyColor;
+
+		@media (min-width: $tablet) {
+			max-width: rem(580);
+		}
+	}
+	// .about-me__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: em(40, 32);
+		}
+	}
+
+	// .about-me__sub-text
+	&__sub-text {
+	}
+	// .about-me__image
+	&__image {
+		position: relative;
+		padding: 20%;
+		@media (max-width: $tablet) {
+			width: 100%;
+			padding-top: 50%;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.info {
+	// .info__container
+	&__container {
+	}
+	// .info__body
+	&__body {
+		max-width: rem(650);
+		@include adaptiveValue("padding-top", 135, 40, 1120, 320, 1);
+		@include adaptiveValue("padding-bottom", 135, 40, 1120, 320, 1);
+	}
+	// .info__soft
+	&__soft {
+		display: flex;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 50, 1120, 479, 1);
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	// .info__title
+	&__title {
+		max-width: rem(125);
+		width: 100%;
+		@include adaptiveValue("margin-right", 60, 40, 1120, 479, 1);
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+		letter-spacing: -0.03em;
+		text-decoration-line: underline;
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: em(20, 18);
+			}
+		}
+	}
+	// .info__text
+	&__text {
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+		letter-spacing: -0.03em;
+		p {
+			&:not(:last-child) {
+				margin-bottom: em(25, 18);
+			}
+		}
+	}
+	// .info__skills
+	&__skills {
+		display: flex;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+}
+//========================================================================================================================================================
+.contact {
+	// .contact__container
+	&__container {
+	}
+	// .contact__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: rem(20);
+		row-gap: rem(25);
+		@include adaptiveValue("padding-top", 70, 40, 1120, 320, 1);
+		@include adaptiveValue("padding-bottom", 100, 40, 1120, 320, 1);
+		border-top: 2px solid $darkColor;
+	}
+	// .contact__promo
+	&__promo {
+		flex: 1 1 auto;
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
+	}
+	// .contact__next-project
+	&__next-project {
+		position: relative;
+		font-family: "DM Sans";
+		@include adaptiveValue("font-size", 32, 21, 1120, 320, 1);
+		line-height: math.div(37, 32);
+		letter-spacing: -0.03em;
+		@media (min-width: $tablet) {
+			max-width: rem(350);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			right: 50px;
+			bottom: 6px;
+			background-image: url("../img/icons/arrow-right.svg");
+			background-repeat: no-repeat;
+			width: 28px;
+			height: 20px;
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+	// .contact__link
+	&__link {
+	}
+	// .contact__mail
+	&__mail {
+		font-family: "DM Sans";
+		@include adaptiveValue("font-size", 32, 21, 1120, 320, 1);
+		line-height: math.div(37, 32);
+		letter-spacing: -0.03em;
+	}
+}

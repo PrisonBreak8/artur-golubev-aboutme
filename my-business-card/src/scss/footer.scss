@@ -1,0 +1,61 @@
+//====================================================================================================
+.footer {
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		@include adaptiveValue("padding-top", 70, 40, 1120, 320, 1);
+		@include adaptiveValue("padding-bottom", 70, 40, 1120, 320, 1);
+		@media (max-width: $mobileSmall) {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	// .footer__authors
+	&__authors {
+		flex: 1 1 auto;
+	}
+	// .footer__name
+	&__name {
+		font-family: "DM Sans";
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: -0.03em;
+		color: $blueColor;
+	}
+}
+.my-social-networks {
+	margin-left: rem(15);
+	@media (max-width: $mobileSmall) {
+		margin: 0 0 rem(15) 0;
+	}
+	// .my-social-networks__item
+	&__item {
+		display: flex;
+		@include adaptiveValue("	column-gap", 30, 18, 1120, 479.98, 1);
+	}
+	// .my-social-networks__list
+	&__list {
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+			}
+		}
+		img {
+			height: 100%;
+			width: 40px;
+		}
+	}
+	// .my-social-networks__link
+	&__link {
+	}
+}
+
+//====================================================================================================
